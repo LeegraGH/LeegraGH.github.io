@@ -172,6 +172,7 @@ header{
 .to-basket{
     transform: scale(1);
     transition: transform 0.5s ease;
+    cursor: pointer;
 }
 
 .to-basket:hover{
