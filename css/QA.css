@@ -1,0 +1,307 @@
+header{
+    position: relative;
+    background: rgba(0, 0, 0, 0.282);
+}
+
+.qa-ellipse1{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top: 0%;
+    right: 0;
+    z-index: -5;
+    
+    background: rgba(205, 63, 255, 0.44);
+    filter: blur(300px);
+}
+
+.qa-ellipse2{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    
+    background: rgba(63, 71, 255, 0.48);
+    filter: blur(300px);
+}
+
+.question-answer h2{  
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 60px;
+    
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 60px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    
+    background: linear-gradient(265.34deg, #21D4FD 21.26%, #E40ECF 66.55%), #FFFFFF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.qa-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.qa-list .quastion{
+    position: relative;
+    width: 90%;
+    height: auto;
+    color: white;
+    padding: 3.3% 5%;
+    cursor: pointer;
+    
+    background: radial-gradient(42.61% 55.51% at 60.46% 100%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(58.56% 126.24% at 31.37% 0%, rgba(255, 255, 255, 0.4002) 0%, rgba(255, 255, 255, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(74.14% 74.14% at 102.47% 39.73%, rgba(196, 102, 230, 0.83) 0%, rgba(219, 102, 229, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(88.4% 88.4% at 86.12% 6.46%, rgba(159, 114, 233, 0.89) 0%, rgba(114, 233, 138, 0) 56.56%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(73.57% 73.57% at 0% 67.49%, rgba(13, 126, 255, 0.52) 0%, rgba(86, 102, 239, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(124.52% 124.52% at -3.99% 35.36%, rgba(0, 87, 255, 0.69) 3.83%, rgba(0, 209, 255, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #D0E0F3;
+    box-shadow: inset 0px 0px 18px rgba(255, 255, 255, 0.82);
+    border-radius: 73px;
+}
+
+.qa-list .quastion .question-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.qa-list .quastion::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 3px;
+    left: 0;
+    z-index: -1;
+    
+    background: radial-gradient(42.61% 55.51% at 60.46% 100%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(58.56% 126.24% at 31.37% 0%, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(108.75% 108.75% at 117.11% 81.18%, #DF72E9 0%, rgba(79, 181, 255, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(88.4% 88.4% at 86.12% 6.46%, #72E98A 0%, rgba(114, 233, 138, 0) 56.56%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(73.57% 73.57% at 0% 67.49%, #FF00F5 0%, rgba(0, 209, 255, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(124.52% 124.52% at -3.99% 35.36%, #FF00F5 0%, rgba(0, 209, 255, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #D0E0F3;
+    box-shadow: 0px 51px 95px -41px rgba(77, 130, 235, 0.39), -80px -101px 147px -68px rgba(55, 145, 229, 0.501), 0px 109px 175px -30px #0048ff98;
+    border-radius: 80px;
+}
+
+.qa-list .quastion::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 3px;
+    left: 0;
+    z-index: -2;
+    
+    background: radial-gradient(42.61% 55.51% at 60.46% 100%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(58.56% 126.24% at 31.37% 0%, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(108.75% 108.75% at 117.11% 81.18%, #B566E6 0%, rgba(181, 102, 230, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(88.4% 88.4% at 86.12% 6.46%, #72E98A 0%, rgba(114, 233, 138, 0) 56.56%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(73.57% 73.57% at 0% 67.49%, #E478FF 0%, rgba(86, 102, 239, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(124.52% 124.52% at -3.99% 35.36%, #00D1FF 0%, rgba(0, 209, 255, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #D0E0F3;
+    box-shadow: inset 0px 0px 15px rgba(210, 108, 204, 0.71);
+    border-radius: 102px;
+}
+
+.qa-list .quastion.active{
+    border-radius: 45px;
+}
+
+.qa-list .quastion.active::after{
+    border-radius: 45px;
+}
+
+.qa-list .quastion.active::before{
+    border-radius: 50px;
+}
+
+.qa-list .quastion p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    
+    color: #000000;
+}
+
+.answer-down p{
+    text-align: left;
+}
+
+.answer-down{
+    position: relative;
+    display: none;
+}
+
+.answer-down.active{
+    display: inline-block;
+    padding: 7% 0 5% 0;
+    margin: 20px 0;
+}
+
+.answer-down::before{
+    content: "";
+    position: absolute;
+    margin-top: -10px;
+    width: 100%;
+    height: 1px;
+    opacity: 0.3;
+    background: white;
+    border: 1px solid #FFFFFF;  
+}
+
+.answer-down::after{
+    content: "";
+    position: absolute;
+    margin-top: 10px;
+    width: 100%;
+    height: 1px;
+    opacity: 0.3;
+    background: white;
+    border: 1px solid #FFFFFF;  
+}
+
+.qa-list .quastion i{
+    font-size: 35px;
+    color: rgba(62, 0, 84, 1);
+}
+
+.product-btn{
+    display: block;
+    max-width: 600px;
+    height: 95px;
+    margin: 55px auto;
+    padding: 0 5%;
+    cursor: pointer;
+    
+    border: none;
+    background: linear-gradient(95.18deg, #02ACD2 15.11%, #A900C5 72.11%);
+    border-radius: 100px;
+
+    transform:scale(1);
+    transition: transform 0.5s ease;
+}
+
+.product-btn:hover{
+    transform:scale(1.05);
+}
+
+.product-btn a{
+    text-decoration-line: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 29px;
+    
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.subscribe .subscr-btn {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.subscribe h2{
+    margin-top: 80px;
+    font-size: 38px;
+    width: 80%;
+    line-height: 50px;
+}
+
+@media screen and (max-width: 1023px){
+
+    .subscribe h2{
+        font-size: calc(18px + 12 * (100vw / 1000));
+        line-height: 35px;
+        width: 100%;
+    }
+
+    .question-answer h2{  
+        font-size: calc(34px + 16 * (100vw / 1000));
+    }    
+
+    .qa-list .quastion p{
+        font-size: calc(10px + 10 * (100vw / 1000));
+    }
+
+    .qa-list .quastion i{
+        font-size: calc(8px + 20 * (100vw / 1000));
+    }
+    
+    .product-btn{
+        height: calc(35px + 40 * (100vw / 1000));
+    }
+    
+    .product-btn a{
+        font-size: calc(6px + 8 * (100vw / 1000));
+    }
+}
+
+@media screen and (max-width: 767px){
+    .question-answer h2{
+        font-size: 37px;
+        margin-top: 0;
+        padding-top: 90px;
+        margin-bottom: 50px;
+    }
+
+    .subscribe h2{
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 479px){
+    
+    .subscribe h2{
+        font-size: calc(12px + 10 * (100vw / 1000));
+        line-height: 20px;
+        width: 100%;
+    }
+
+    header{
+        position: fixed;
+    }
+
+    .subscribe h2{ 
+        margin-top: 50px;
+    }
+
+    .subscribe .subscr-btn {
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    .question-answer h2{
+        font-size: 26px;
+        margin-top: 0;
+        padding-top: 120px;
+        margin-bottom: 40px;
+    }
+
+    .product-btn{
+        margin: 30px auto;
+    }
+
+    .qa-list .quastion.active{
+        border-radius: 20px;
+    }
+    
+    .qa-list .quastion.active::after{
+        border-radius: 20px;
+    }
+    
+    .qa-list .quastion.active::before{
+        border-radius: 25px;
+    }
+
+    .qa-ellipse1{
+        filter: blur(170px);
+    }
+
+    .qa-ellipse2{
+        filter: blur(170px);
+    }
+}

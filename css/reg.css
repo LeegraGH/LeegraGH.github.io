@@ -1,0 +1,137 @@
+/* .register-form{
+    display: none;
+} */
+
+.registration{
+    width: 50%;
+    height: auto;
+    background: linear-gradient(51.08deg, rgba(252, 14, 228, 0.33) 27.66%, rgba(33, 81, 253, 0.06) 96.28%);
+    border: 1px solid rgba(255, 255, 255, 0.763);
+    border-radius: 11px;
+    padding: 30px 40px;
+    margin: 20px auto;
+}
+
+.reg-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.reg-form form input{
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    background: none;
+    border: 1px solid #DCF2F8;
+    border-radius: 6px;
+}
+
+.reg-form h3{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.reg-form label{
+    display: block;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.reg-form .mail-form{
+
+}
+
+.reg-form .pass-form{
+
+}
+
+.reg-form .btn-form{
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.reg-form .btn-form button{
+    width: 48.5%;
+    border-radius: 6px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    
+    color: #FFFFFF; 
+}
+
+.reg-form .btn-form button:first-child{
+    background: linear-gradient(262.17deg, #21D4FD -9.98%, #E40ECF 62.2%); 
+}
+
+.reg-form .btn-form button:last-child{
+    border: 1px solid #FFFFFF;
+}
+
+@media screen and (max-width: 1023px){
+    .reg-form h3{
+        font-size: calc(10px + 18 * (100vw / 1000));
+    }
+}
+
+@media screen and (max-width: 767px){
+
+    .registration{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 479px){
+
+    .registration{
+        width: 80%;
+        padding: 10px 20px;
+        margin: 10% auto 20px auto;
+    }
+
+    .reg-form .btn-form{
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }   
+
+    .reg-form .btn-form button{
+        width: 100%;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .reg-form form input{
+        padding: 5px 0;
+    }
+
+    .reg-form h3{
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+
+    .reg-form label{
+        font-size: 12px;
+    }
+
+    .social .social-icon img{
+        width: 25px;
+        height: auto;
+    }
+}

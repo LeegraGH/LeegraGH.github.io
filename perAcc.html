@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/563ce4d2d7.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/basket.css" rel="stylesheet" type="text/css">
+    <link href="css/perAcc.css" rel="stylesheet" type="text/css">
+    <link href="css/changePerData.css" rel="stylesheet" type="text/css">
+    <link href="css/reg.css" rel="stylesheet" type="text/css">
+    <link href="css/entry.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="img/icons/shop-icon.png">
+    <title>Astro</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top">
+            <header>
+                <div class="container">
+                    <div class="head-site">
+                        <div class="logo-name">Astro</div>
+                        <nav class="list-choice">
+                            <p><a href="index.html">Главная</a></p>
+                            <p><a href="products.html">Продукция</a></p>
+                            <p><a href="question-answer.html">Вопрос-ответ</a></p>
+                        </nav>
+                        <div class="head-icons">
+                            <a href="basket.html"><img class="head-icon1" src="img/icons/basket.svg" alt="basket"></a>
+                            <a href="perAcc.html"><img class="head-icon2" src="img/icons/per-acc.svg" alt="account"></a>
+                        </div>
+                    </div>
+                    <div class="hamburger-menu">
+                        <input id="menu__toggle" type="checkbox" />
+                        <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                        </label>
+                        <ul class="menu__box">
+                            <li><a class="menu__item" href="index.html">Главная</a></li>
+                            <li><a class="menu__item" href="products.html">Продукция</a></li>
+                            <li><a class="menu__item" href="question-answer.html">Вопрос-ответ</a></li>
+                            <li><a class="menu__item" href="basket.html">Корзина</a></li>
+                            <li><a class="menu__item" href="perAcc.html">Личный кабинет</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <section class="perEntry">
+                <div class="container">
+                    <h2></h2>
+                    <div class="entry-form">
+                        <h3>Войти в аккаунт</h3>
+                        <form name="entrance-form" action="#" enctype="multipart/form-data" method="post">
+                            <div class="mail-form">
+                                <label for="mail">Почта:</label>
+                                <input type="email" name="mail">
+                            </div>
+                            <div class="pass-form">
+                                <label for="pass">Пароль:</label>
+                                <input type="password" name="password">
+                            </div>
+                            <div class="btn-form">
+                                <button type="button" name="entry-btn">Войти</button>
+                                <button type="button" name="remember-btn">Вспомнить пароль</button>
+                                <button type="button" name="register-btn">Зарегистрироваться</button>  
+                            </div>
+                        </form>
+                    </div>
+                    <div class="entry-icons">
+                        <h4>Войти с помощью соцсетей</h4>
+                        <div class="social">
+                            <div class="social-icon"><a href=""><img src="img/icons/icon-vk.svg" alt="vk"></a></div>
+                            <div class="social-icon"><a href=""><img src="img/icons/icon-yandex.svg" alt="yandex"></a></div>
+                            <div class="social-icon"><a href=""><img src="img/icons/icon-google.svg" alt="google"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="register-form">
+                <div class="container">
+                    <h2></h2>
+                    <div class="registration">
+                        <div class="reg-form">
+                            <h3>Регистрация</h3>
+                            <form name="reg" action="#" enctype="multipart/form-data" method="post">
+                                <div class="name-form">
+                                    <label for="name">Фамилия и имя:</label>
+                                    <input type="text" name="name">
+                                </div>
+                                <div class="mail-form">
+                                    <label for="mail">Почта:</label>
+                                    <input type="email" name="mail">
+                                </div>
+                                <div class="pass-form">
+                                    <label for="pass">Пароль:</label>
+                                    <input type="password" name="password">
+                                </div>
+                                <div class="btn-form">
+                                    <button type="button" name="entry-btn">Сохранить</button>
+                                    <button type="button" name="back-btn">Отмена</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="entry-icons">
+                        <h4>Войти с помощью соцсетей</h4>
+                        <div class="social">
+                            <div class="social-icon"><a href=""><img src="img/icons/icon-vk.svg" alt="vk"></a></div>
+                            <div class="social-icon"><a href=""><img src="img/icons/icon-yandex.svg" alt="yandex"></a></div>
+                            <div class="social-icon"><a href=""><img src="img/icons/icon-google.svg" alt="google"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="personalData">
+                <div class="container">
+                    <h2>Личный кабинет</h2>
+                    <div class="person-data-form">
+                        <button type="button" class="changePer"><i class="fa-solid fa-pen"></i></button>
+                        <div class="per-photo"><a href=""><img src="img/icons/circle-user.svg" alt="user_photo"></a></div>
+                        <div class="per-info">
+                            <p><b>Круглова Анна</b></p>
+                            <p>Номер телефона: <i>89012831757</i></p>
+                            <p>Почта: <i>use.anya@gmail.com</i></p>
+                            <p>Дата регистрации: <i>01.12.2022</i></p>
+                            <p>Покупок совершено: <i>0</i></p>
+                            <p>Персональная скидка: <i>0%</i></p>
+                            <p>Адрес доставки: <i>Россия, г. Москва, проспект Вернадского, дом 86с1</i></p>
+                            <p>Ближайшие доставки: <i>—</i></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="changePersonalAccount">
+                <div class="container">
+                    <h2>Личный кабинет</h2>
+                    <div class="change-person-form">
+                        <form name="form-back-call" action="#" enctype="multipart/form-data" method="post">
+                            <div class="photo-form">
+                                <a href=""><img src="img/icons/circle-user.svg" alt="user_photo"></a>
+                                <div class="user-photo-btn">
+                                    <label for="upload"><i class="fa-solid fa-arrow-up-from-bracket"></i></label>
+                                    <input type="file" name="upload">
+                                </div>
+                            </div>
+                            <div class="fill-form">
+                                <div class="login-form">
+                                    <label for="name">Фамилия и имя:</label>
+                                    <input type="login" name="name">
+                                </div>
+                                <div class="mail-form">
+                                    <label for="mail">Почта:</label>
+                                    <input type="email" name="mail">
+                                </div>
+                                <div class="phone-form">
+                                    <label for="phone">Телефон:</label>
+                                    <input type="tel" name="phone">
+                                </div>
+                                <div class="place-order-form">
+                                    <label for="order">Адрес доставки:</label>
+                                    <input type="text" name="order">
+                                </div>
+                                <div class="btn-form">
+                                    <button class="get-data-btn" type="button" name="save">Сохранить</button>
+                                    <button class="reset-btn" type="button" name="reset">Отмена</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="card-block">
+                <div class="container">
+                    <h4>У Вас до сих пор отсутствует личный кабинет?</h4>
+                    <p>Скорее регистрируйтесь и пользуйтесь преимуществами!</p>
+                    <div class="cards">
+                        <div class="gradient-border card">
+                            <h6>Просто</h6>
+                            <p>Упрощение процедуры заказа и экономия времени за счет автоматической подстановки данных пользователя</p>
+                        </div>
+                        <div class="gradient-border card">
+                            <h6>Выгодно</h6>
+                            <p>Простота отслеживания заказов, возможность быстро повторить аналогичный заказ, преимущества в виде спецпредложений, бонусов и скидок</p>
+                        </div>
+                        <div class="gradient-border card">
+                            <h6>Удобно</h6>
+                            <p>Дополнительные функции — добавление в избранное, списки желаний, просмотренные товары</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="info">
+                    <div class="contacts">
+                        <h3>Контакты</h3>
+                        <ul>
+                            <li><a href="tel:+79012831757">+7 901 283 17 57</a></li>
+                            <li><a href="mailto:astro_market">astro_market</a></li>
+                            <li><a href="mailto:astro@market.play">astro@market.play</a></li>
+                            <li><a href="mailto:astroplay@gmail.com">astroplay@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu">
+                        <h3>Меню</h3>
+                        <ul>
+                            <li><a href="products.html">Продукция</a></li>
+                            <li><a href="question-answer.html">Вопрос-ответ</a></li>
+                            <li><a href="basket.html">Корзина</a></li>
+                            <li><a href="perAcc.html">Профиль</a></li>
+                        </ul>
+                    </div>
+                    <div class="social">
+                        <h3>Соцсети</h3>
+                        <div class="networks">
+                            <div class="network"><a href="#"><img src="img/icons/whatsup.svg" alt=""></a></div>
+                            <div class="network"><a href="#"><img src="img/icons/telegram.svg" alt=""></a></div>
+                            <div class="network"><a href="#"><img src="img/icons/vk.svg" alt=""></a></div>
+                            <div class="network"><a href="#"><img src="img/icons/insta.svg" alt=""></a></div>
+                            <div class="network"><a href="#"><img src="img/icons/youtube.svg" alt=""></a></div>
+                        </div>
+                        <div class="other">
+                            <p>Политика конфиденциальности</p>
+                            <p>Astro © 2022. Все права защищены.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/changePerData.js"></script>
+    <script src="js/entry.js"></script>
+</body>
+</html>

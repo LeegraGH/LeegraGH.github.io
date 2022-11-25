@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/563ce4d2d7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/infoItem.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="img/icons/shop-icon.png">
+    <title>Astro</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top">
+            <header>
+                <div class="container">
+                    <div class="head-site">
+                        <div class="logo-name">Astro</div>
+                        <nav class="list-choice">
+                            <p><a href="index.html">Главная</a></p>
+                            <p><a href="products.html">Продукция</a></p>
+                            <p><a href="question-answer.html">Вопрос-ответ</a></p>
+                        </nav>
+                        <div class="head-icons">
+                            <a href="basket.html"><img class="head-icon1" src="img/icons/basket.svg" alt="basket"></a>
+                            <a href="perAcc.html"><img class="head-icon2" src="img/icons/per-acc.svg" alt="account"></a>
+                        </div>
+                    </div>
+                    <div class="hamburger-menu">
+                        <input id="menu__toggle" type="checkbox" />
+                        <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                        </label>
+                        <ul class="menu__box">
+                            <li><a class="menu__item" href="index.html">Главная</a></li>
+                            <li><a class="menu__item" href="products.html">Продукция</a></li>
+                            <li><a class="menu__item" href="question-answer.html">Вопрос-ответ</a></li>
+                            <li><a class="menu__item" href="basket.html">Корзина</a></li>
+                            <li><a class="menu__item" href="perAcc.html">Личный кабинет</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <div class="message-icon">
+                <div class="question-message"><img src="img/icons/message.svg" alt="message"></div>
+                <div class="link-form">
+                    <div class="close-form"><i class="fa-solid fa-xmark"></i></div>
+                    <h3>Задать вопрос</h3>
+                    <p>Задайте вопрос и оставьте контактные данные.<br>Мы обязательно свяжемся с вами в рабочее время!</p>
+                    <form name="form-back-call" action="#" enctype="multipart/form-data" method="post">
+                        <input type="login" name="name" placeholder="Имя">
+                        <input type="tel" name="phone" placeholder="Телефон">
+                        <textarea name="question" placeholder="Ваш вопрос"></textarea>
+                        <div class="check_in">
+                            <div class="cntr">
+                                <input checked="" type="checkbox" id="cbx" class="hidden-xs-up">
+                                <label for="cbx" class="cbx"></label>
+                            </div>
+                            <p>Нажимая на кнопку "Отправить" Вы выражаете согласие на обработку персональных данных в соответствии с требованиями Федерального закона «О персональных данных»</p>
+                        </div>
+                        <button type="submit" name="send">Отправить</button>
+                    </form>
+                </div>
+            </div>
+            <section class="item-block">
+                <div class="container">
+                    <h2></h2>
+                    <div class="info-item">
+                        <div class="item">
+                            <img src="img/xbox-photo/fab86afd-63d6-45a9-862f-798e5e45cda2.png" alt="">
+                            <button class="to-basket" type="button">В корзину</button>
+                            <!-- <p class="cost"><b>Цена:</b> <s>8 445₽</s> 6 387 ₽</p> -->
+                            <p class="cost"><b>Цена:</b> 6 387 ₽</p>
+                        </div>
+                        <div class="characteristic">
+                            <h4>Характеристики:</h4>
+                            <p сlass="name">Название: геймпад Xbox Series</p>
+                            <p сlass="color">Цвет: чёрный</p>
+                            <p сlass="input">Тип подключения: беспроводной</p>
+                            <p сlass="year">Время работы: 40 часов</p>
+                            <p сlass="date">Срок службы: 1 год</p>
+                        </div>
+                        <!-- <div class="description">
+                            <h4>Описание:</h4>
+                            <p>Познакомьтесь с модернизированным дизайном беспроводного геймпада Xbox (Model 1914) и насладитесь его фигурными поверхностями и изысканной геометрией, которые повышают комфорт во время игры. Вы больше не упустите цель благодаря текстурированным рукояткам и гибридной крестовине.
+                                Легко захватывайте контент и делитесь им с помощью специальной кнопки «Поделиться».
+                                Быстрое сопряжение, воспроизведение и переключение между устройствами, включая Xbox Series X|S, Xbox One, ПК с Windows 10, Android и iOS.
+                                Используется технология Xbox Wireless и Bluetooth для беспроводной игры на консоли, ПК, мобильных телефонах и планшетах. Подключайте к стереогнезду 3,5 мм любую совместимую гарнитуру.</p>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+            <section class="item-block-2">
+                <div class="container">
+                    <h2>Беспроводной геймпад Xbox</h2>
+                    <div class="some-info">
+                        <img class="picture-info" src="img/xbox-photo/gabriel-dias-pimenta-4GA8bgF9f1M-unsplash (1).jpg" alt="">
+                        <div class="text-info">
+                            <h3>Играйте на новом уровне!</h3>
+                            <p>Познакомьтесь с модернизированным дизайном беспроводного геймпада Xbox и насладитесь его фигурными поверхностями и изысканной геометрией, которые повышают комфорт во время игры. Вы больше не упустите цель благодаря текстурированным рукояткам и гибридной крестовине. Легко захватывайте контент и делитесь им с помощью специальной кнопки «Поделиться». Быстрое сопряжение, воспроизведение и переключение между устройствами, включая Xbox Series X|S, Xbox One, ПК с Windows, Android и iOS.</p>
+                        </div>
+                    </div>
+            </section>
+            <section class="slider">
+                <div class="container">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/xbox-photo/17fe66c7-f8d3-4325-8a71-1511a15615fb.png"></div>
+                            <div class="swiper-slide"><img src="img/xbox-photo/4ae80482-3d9e-4541-9d28-8a7d746cf2f2.png"></div>
+                            <div class="swiper-slide"><img src="img/xbox-photo/55836945-e141-4d47-9dad-21d902948816.png"></div>
+                            <div class="swiper-slide"><img src="img/xbox-photo/cebdcf7f-6301-41b5-add2-b158a4914540.png"></div>
+                            <div class="swiper-slide"><img src="img/xbox-photo/fab86afd-63d6-45a9-862f-798e5e45cda2.png"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </section>
+            <section class="item-block-3">
+                <div class="container">
+                    <div class="use-with">
+                        <div class="some-info">
+                            <div class="text-info">
+                                <h3>Совместимость</h3>
+                                <p>Используется технология Xbox Wireless и Bluetooth® для беспроводной игры на консоли, ПК, мобильных телефонах и планшетах. Подключайте к стереогнезду 3,5 мм любую совместимую гарнитуру.</p>
+                            </div>
+                            <img class="picture-info" src="img/xbox-photo/jose-gil-2pNdTBn4C7U-unsplash.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="item-block-4">
+                <div class="container">
+                    <div class="color-items">
+                        <img class="color-types" src="img/gallery/93e712ee-428d-473e-a157-7da2053e4e15-PhotoRoom (1).png" alt="">
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="info">
+                    <div class="contacts">
+                        <h3>Контакты</h3>
+                        <ul>
+                            <li><a href="tel:+79012831757">+7 901 283 17 57</a></li>
+                            <li><a href="mailto:astro_market">astro_market</a></li>
+                            <li><a href="mailto:astro@market.play">astro@market.play</a></li>
+                            <li><a href="mailto:astroplay@gmail.com">astroplay@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu">
+                        <h3>Меню</h3>
+                        <ul>
+                            <li><a href="products.html">Продукция</a></li>
+                            <li><a href="question-answer.html">Вопрос-ответ</a></li>
+                            <li><a href="basket.html">Корзина</a></li>
+                            <li><a href="perAcc.html">Профиль</a></li>
+                        </ul>
+                    </div>
+                    <div class="social">
+                        <h3>Соцсети</h3>
+                        <div class="networks">
+                            <div class="network"><a href="#"><img src="img/icons/whatsup.svg" alt=""></a></div>
+                            <div class="network"><a href="#"><img src="img/icons/telegram.svg" alt=""></a></div>
+                            <div class="network"><a href="#"><img src="img/icons/vk.svg" alt=""></a></div>
+                            <div class="network"><a href="#"><img src="img/icons/insta.svg" alt=""></a></div>
+                            <div class="network"><a href="#"><img src="img/icons/youtube.svg" alt=""></a></div>
+                        </div>
+                        <div class="other">
+                            <p>Политика конфиденциальности</p>
+                            <p>Astro © 2022. Все права защищены.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/slider.js"></script>
+    <script src="js/showForm.js"></script>
+</body>
+</html>

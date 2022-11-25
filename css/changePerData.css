@@ -1,0 +1,348 @@
+header{
+    position: relative;
+    background: rgba(0, 0, 0, 0.282);
+}
+
+h2{  
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 60px;
+    
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    
+    background: linear-gradient(265.34deg, #21D4FD 21.26%, #E40ECF 66.55%), #FFFFFF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* .changePersonalAccount{
+    display: none;
+} */
+
+.change-person-form{
+    width: 70%;
+    height: auto;
+    
+    background: linear-gradient(123.55deg, rgba(48, 9, 54, 0.72) 11.74%, rgba(47, 7, 53, 0.1) 87.03%);
+    box-shadow: 0px 51.31px 82.4625px -1.8325px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(24px);
+    border-radius: 50px;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    margin: 80px auto 110px auto;
+}
+
+.change-person-form form{
+    display: flex;
+    gap: 50px;
+    justify-content: center;    
+    flex-wrap: wrap;
+    margin: 70px 30px;
+}
+
+.change-person-form .photo-form{
+    text-align: center;
+}
+
+.fill-form{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    gap: 10px;
+}
+
+.user-photo-btn{
+    position: relative;
+    width: 100%;
+    height: 35px;
+    margin: 10px 0;
+    
+    background: linear-gradient(95.18deg, #02ACD2 15.11%, #A900C5 72.11%);
+    border-radius: 18px;
+}
+
+.photo-form{
+    margin-top: 10px;
+}
+
+.photo-form img{
+    width: 90%;
+    height: auto;
+}
+
+.user-photo-btn input[type='file']{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 18px;
+}
+
+.user-photo-btn label[for="upload"]{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+}
+
+.user-photo-btn label i{
+    color: white;
+    font-size: 20px;
+}
+
+.change-person-form .fill-form div{
+    flex: 100%;
+    width: 100%;
+}
+
+.change-person-form .fill-form label{
+    display: block;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.change-person-form .fill-form input{
+    width: 100%;
+    height: auto;
+    padding: 8px 0;
+    border: 1px solid #dcf2f8bc;
+    border-radius: 8px;
+    background: none;
+}
+
+.change-person-form .btn-form{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.btn-form button{
+    width: 48%;
+    height: auto;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+.btn-form button:nth-child(1){
+    background: linear-gradient(262.17deg, #21D4FD -9.98%, #E40ECF 62.2%);
+}
+
+.btn-form button:nth-child(2){
+    border: 1px solid #ffffff69;
+    background: none;
+}
+
+@media screen and (max-width: 1023px){
+    h2{
+        font-size: calc(30px + 12 * (100vw / 1000));
+        margin-top: 0;
+        padding-top: 50px;
+        margin-bottom: 42px;
+        line-height: 40px;
+    }
+
+    .change-person-form{
+        margin: 60px auto 80px auto;
+    }
+
+    .photo-form img{
+        width: 70%;
+    }
+
+    .user-photo-btn{
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .user-photo-btn label[for="upload"]{
+        top: 25%;
+        left: 40%;
+    }
+
+    .user-photo-btn label i{
+        font-size: 18px;
+    }
+
+    .change-person-form form{
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 767px){
+
+    h2{
+        font-size: calc(20px + 12 * (100vw / 1000));
+        margin-top: 0;
+        padding-top: 40px;
+        margin-bottom: 42px;
+        line-height: 40px;
+    }
+
+    .change-person-form{
+        margin: 0 auto 50px auto;
+    }
+
+    .btn-form button{
+        width: 48%;
+        border-radius: 8px;
+        padding: 10px 10px;
+        font-size: 13px;
+    }
+
+    .change-person-form .fill-form label{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .photo-form img{
+        width: 20%;
+    }
+
+    .change-person-form form{
+        gap: 10px;
+        margin: 50px 20px;
+    }
+
+    .change-person-form .photo-form{
+        flex: 100%;
+    }
+
+    .user-photo-btn{
+        width: 20%;
+        height: 30px;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .user-photo-btn label[for="upload"]{
+        margin: auto;
+    }
+    
+    .user-photo-btn label i{
+        font-size: 15px;
+    }
+
+    .fill-form{
+        width: 85%;
+        gap: 10px;
+    }
+
+    .change-person-form{
+        width: 75%;
+        height: auto;
+        border-radius: 40px;
+        margin: 0 auto 80px auto;
+    }
+}
+
+@media screen and (max-width: 479px){
+
+    header{
+        position: fixed;
+    }
+    
+    .change-person-form .fill-form label{
+        font-size: 11px;
+    }
+
+    .change-person-form .fill-form input{
+        width: 100%;
+        height: auto;
+        padding: 5px 0;
+    }
+
+    .change-person-form{
+        width: 100%;
+        height: auto;
+        margin: 0 auto 50px auto;
+    }
+
+    h2{
+        font-size: 22px;
+        margin-top: 0;
+        padding-top: 120px;
+        margin-bottom: 30px;
+        line-height: 40px;
+    }
+
+    .changePersonalAccount .container{
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .user-photo-btn{
+        width: 20%;
+        height: 30px;
+        margin: 10px auto;
+    }
+
+    .user-photo-btn label[for="upload"]{
+        top: 20%;
+        left: 38%;
+        margin: auto;
+    }
+    
+    .user-photo-btn label i{
+        font-size: 14px;
+    }
+}
+
+@media screen and (width: 280px){
+
+    h2{
+        font-size: 20px;
+    }
+
+    .changePersonalAccount .container{
+        padding: 5px;
+    }
+
+    .change-person-form{
+        width: 95%;
+        height: auto;
+        margin: 0 auto 50px auto;
+    }
+
+    .user-photo-btn{
+        width: 20%;
+        height: 25px;
+        margin: 10px auto;
+    }
+
+    .user-photo-btn label[for="upload"]{
+        top: 12%;
+        left: 16px;
+    }
+
+    .user-photo-btn label i{
+        font-size: 12px;
+    }
+
+    .btn-form button{
+        font-size: 10px;
+    }
+}

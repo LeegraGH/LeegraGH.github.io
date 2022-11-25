@@ -1,0 +1,2165 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #0A0914;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.top {
+    flex-grow: 1;
+}
+
+/* body::-webkit-scrollbar {
+    display: none;            
+} */
+
+.container{
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+header{
+    position: absolute; 
+    height: 72px;
+    width: 100%;    
+    background: rgba(0, 0, 0, 0.66);
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.19);
+}
+
+.hamburger-menu{
+    display: none;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 14.5px;
+    left: 79.9%;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-top: 80px;
+    list-style: none;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.97);
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    z-index: 9;
+}
+
+.menu__item {
+    display: block;
+    padding: 20px 24px;
+    text-decoration: none;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    text-align: center;
+    
+    color: white;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    transition-duration: .25s;
+}
+.menu__box {
+    transition-duration: 0s;
+}
+.menu__item {
+    transition-duration: 0s;
+}
+
+.head-site{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.logo-name{
+    padding: 24px 0;   
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14pt;
+    line-height: 24px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;  
+    color: #FFFFFF;
+    z-index: 1;
+}
+
+.list-choice{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    z-index: 1;
+}
+
+.list-choice a{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11pt;
+    line-height: 17px;
+    
+    text-decoration-line: none;
+    color: #AEAEAE;
+}
+
+.list-choice p{
+    transform:translateY(0);
+    transition: transform 0.3s linear;
+}
+
+.list-choice p:hover{
+    transform:translateY(-3px);
+}
+
+.logo-name{
+    width: 20%;
+}
+
+.head-icons{
+    width: 20%;
+}
+
+.head-icons{
+    padding: 17px 0;
+    z-index: 1;
+    text-align: right;
+}
+
+.head-icon1{
+    width: 30px;
+    height: 30px;
+    margin-right: 9px;
+}
+
+.head-icon2{
+    width: 34px;
+    height: 34px;
+    margin-left: 9px;
+}
+
+.head-icon1:hover, .head-icon2:hover{
+    opacity: 0.8;
+}
+
+.main-view{
+    width: 100%;
+    height: 850px;
+    background: url("../img/bg/main-bg.jpg") top center/cover no-repeat;
+    background-size:cover;
+}
+
+.welcome{
+    padding-top: 72px;
+}
+
+.shop-name h1{
+    position: relative;
+    max-width: 100%;
+    margin-top: 100px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60pt;
+    line-height: 100px;
+    letter-spacing: 0.335em;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+
+}
+
+
+/* .welcome-icons{
+    display: flex;
+    justify-content: space-between;
+} */
+
+.btn-product{
+    position: relative;
+    width: 30%;
+    height: 75px;
+    
+    background: linear-gradient(97.21deg, #1CBEE3 1.28%, #C60EE4 62.13%);
+    border-radius: 100px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12pt;
+    line-height: 24px;
+    padding-top: 25px;
+    text-align: center;
+    letter-spacing: 0.46em;
+    text-transform: uppercase;
+    transform: scale(1);
+    transition: transform 0.4s ease-in-out;
+}
+
+.btn-product:hover{
+    transform: scale(1.05);
+}
+
+
+.btn-product a{
+    text-decoration-line: none;
+    color: #FFFFFF;
+}
+
+.message-icon{
+    position: fixed;
+    z-index: 8;
+    bottom: 5%;
+    right: 5%;
+}
+
+.message-icon img{
+    margin-left: 19px;
+    margin-top: 19px;
+}
+
+.question-message{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    z-index: 2;
+    margin: 7.5px 0;
+    display: inline-block;
+    
+    background: linear-gradient(0deg, #1CBEE3 15.24%, #C60EE4 61.62%);
+    border-radius: 65px;
+    cursor: pointer; 
+    transform: rotate(0deg);
+}
+
+.question-message:hover{
+    animation: pulse 1s linear;
+}
+
+@keyframes pulse{
+    0% {transform: scale(1);}
+    25% {transform: scale(1.1);}
+    50% {transform: scale(1);}
+    75% {transform: scale(1.1);}
+    100% {transform: scale(1);}    
+}
+
+.link-form{
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    cursor: auto;
+    z-index: 10;
+
+    width: 450px;
+    height: 540px;
+    
+    background: linear-gradient(123.55deg, rgba(48, 9, 54, 0.72) 11.74%, rgba(47, 7, 53, 0.1) 87.03%);
+    box-shadow: 0px 51.31px 82.4625px -1.8325px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(20px);  
+    border-radius: 45px;
+    border: 2px solid hsla(0, 0%, 100%, 0.19);
+}
+
+.close-form{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.fa-xmark{
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.link-form h3{
+    margin-top: 55px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 15px;
+    
+    text-align: center;
+    letter-spacing: 0.46em;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+}
+
+.link-form p{
+    margin-top: 12px;
+    margin-bottom: 30px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    
+    color: #FFFFFF;
+}
+
+.link-form form{
+    text-align: center;
+}
+
+.link-form form input{
+    width: 90%;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    
+    background: none;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+}
+
+.link-form form textarea{
+    padding: 8px 10px;
+    width: 90%;
+    height: 110px;
+    background: none;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    resize: none;
+    color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+}
+
+.link-form form textarea::placeholder, .link-form form input::placeholder{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    
+    color: #FFFFFF;
+}
+
+.link-form form .check_in p{
+    display: inline-block;
+    width: 85%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    padding-left: 5px;
+    
+    color: #FFFFFF;
+}
+
+.link-form form button{
+    width: 250px;
+    height: 40px;
+    cursor: pointer;
+    
+    background: linear-gradient(95.18deg, #02ACD2 15.11%, #A900C5 72.11%);
+    border-radius: 55px;
+    border: none;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    
+    text-align: center;
+    letter-spacing: 0.46em;
+    text-transform: uppercase;
+    transform: scale(1);
+    transition: transform 0.3s linear;
+    
+    color: #FFFFFF;
+}
+
+.link-form form button:hover{
+    transform: scale(1.05);
+}
+
+.cntr {
+    position: relative;
+    display: inline-block;
+}
+
+.cbx {
+    position: relative;
+    top: -10px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #c8ccd4;
+    border-radius: 3px;
+    transition: background 0.1s ease;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.cbx:after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    width: 5px;
+    height: 10px;
+    opacity: 0;
+    transform: rotate(45deg) scale(0);
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transition: all 0.3s ease;
+    transition-delay: 0.15s;
+}
+
+#cbx:checked ~ .cbx {
+    border-color: transparent;
+    background: #C60EE4;
+    animation: jelly 0.6s ease;
+}
+
+#cbx:checked ~ .cbx:after {
+    opacity: 1;
+    transform: rotate(45deg) scale(1);
+}
+
+@keyframes jelly {
+    from {
+        transform: scale(1, 1);
+    }
+
+    30% {
+        transform: scale(1.25, 0.75);
+    }
+
+    40% {
+        transform: scale(0.75, 1.25);
+    }
+
+    50% {
+        transform: scale(1.15, 0.85);
+    }
+
+    65% {
+        transform: scale(0.95, 1.05);
+    }
+
+    75% {
+        transform: scale(1.05, 0.95);
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+.hidden-xs-up {
+    display: none!important;
+}
+
+.bg-consoles{
+    position: absolute;
+    width: 60%;
+    height: 400px;
+    right: 4%;
+    top: 320px;
+    z-index: 1;
+    
+    background: url("../img/icons/consoles-main.png") no-repeat;
+    background-size: contain;
+}
+
+
+.ellipse1{
+    position: absolute;
+    width: 50%;
+    height: 300px;
+    left: 40%;
+    top: 240px;
+    z-index: 1;
+
+    background: #FFFFFF;
+    filter: blur(200px);
+    transform: rotate(9.83deg);
+}
+
+.ellipse2{
+    position: absolute;
+    width: 564px;
+    height: 750px;
+    right: 0;
+    overflow: hidden;
+    
+    background: #CD3FFF;
+    filter: blur(350px);
+}
+
+.main-text{
+    width: 75%;
+    margin-top: 215px;
+    text-align: justify;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18pt;
+    line-height: 49px;
+    letter-spacing: 0.06em;
+    z-index: 3;
+    
+    color: #FFFFFF;
+}
+
+.welcome-info{
+    margin-top: 250px;
+    margin-bottom: 150px;
+    padding-top: 150px;
+}
+
+.welcome-info .rectangles{
+    display: flex;
+    flex-direction: column;
+    gap: 180px;
+    justify-content: space-between; 
+    align-content: center;
+}
+
+.welcome-info .rectangles .rectangle1{
+    align-self: flex-start;
+}
+
+.welcome-info .rectangles .rectangle2{
+    align-self: flex-end;
+}
+
+.welcome-info .rectangle{
+    position: relative;
+    max-width: 650px;
+    height: 250px;
+    
+    background: radial-gradient(42.61% 55.51% at 60.46% 100%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(58.56% 126.24% at 31.37% 0%, rgba(255, 255, 255, 0.4002) 0%, rgba(255, 255, 255, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(74.14% 74.14% at 102.47% 39.73%, rgba(196, 102, 230, 0.83) 0%, rgba(219, 102, 229, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(88.4% 88.4% at 86.12% 6.46%, rgba(159, 114, 233, 0.89) 0%, rgba(114, 233, 138, 0) 56.56%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(73.57% 73.57% at 0% 67.49%, rgba(13, 126, 255, 0.52) 0%, rgba(86, 102, 239, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(124.52% 124.52% at -3.99% 35.36%, rgba(0, 87, 255, 0.69) 3.83%, rgba(0, 209, 255, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #D0E0F3;
+    box-shadow: inset 0px 0px 18px rgba(255, 255, 255, 0.82);
+    border-radius: 73px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16pt;
+    line-height: 40px;
+    letter-spacing: 0.06em;
+    text-align: justify;
+    padding: 30px 90px;
+    
+    color: #000000;
+}
+
+.welcome-info .rectangle::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    margin-top: 12px;
+    z-index: -1;
+    
+    background: radial-gradient(42.61% 55.51% at 60.46% 100%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(58.56% 126.24% at 31.37% 0%, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(108.75% 108.75% at 117.11% 81.18%, #DF72E9 0%, rgba(79, 181, 255, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(88.4% 88.4% at 86.12% 6.46%, #72E98A 0%, rgba(114, 233, 138, 0) 56.56%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(73.57% 73.57% at 0% 67.49%, #ff00f78a 0%, rgba(0, 209, 255, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(124.52% 124.52% at -3.99% 35.36%, #ff00f779 0%, rgba(0, 209, 255, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #D0E0F3;
+    box-shadow: 0px 51px 95px -41px rgba(65, 203, 0, 0.63), -80px -101px 147px -68px rgba(114, 233, 138, 0.726), 0px 109px 175px -30px #0047FF;
+    border-radius: 80px;
+}
+
+.welcome-info .rectangle::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    margin-top: 12px;
+    z-index: -1;
+    
+    background: radial-gradient(42.61% 55.51% at 60.46% 100%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(58.56% 126.24% at 31.37% 0%, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(108.75% 108.75% at 117.11% 81.18%, #B566E6 0%, rgba(181, 102, 230, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(88.4% 88.4% at 86.12% 6.46%, #72E98A 0%, rgba(114, 233, 138, 0) 56.56%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(73.57% 73.57% at 0% 67.49%, #E478FF 0%, rgba(86, 102, 239, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(124.52% 124.52% at -3.99% 35.36%, #00D1FF 0%, rgba(0, 209, 255, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #D0E0F3;
+    box-shadow: inset 0px 0px 15px rgba(210, 108, 204, 0.71);
+    border-radius: 102px;
+}
+
+.xbox-bg{
+    position: absolute;
+    width: 50%;
+    height: 700px;
+    left: 50%;
+    top: -100px;
+    z-index: -2;
+    
+    background: url("../img/icons/xbox-bg.png") center/cover no-repeat;
+    background-size: contain;
+}
+
+.ellipse3{
+    position: absolute;
+    width: 600px;
+    height: 800px;
+    right: 100px;
+    top: -50px;
+    z-index: -3;
+    
+    background: #C448F3;
+    filter: blur(350px);
+}
+
+.steam-bg{
+    position: absolute;
+    width: 55%;
+    height: 330px;
+    top: 530px;
+    left: -2%;    
+    z-index: -2;
+    
+    background: url("../img/icons/steam-bg.png") center/cover no-repeat;
+    background-size: contain;
+}
+
+.ellipse4{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 400px;
+    left: 10px;
+    z-index: -3;
+    
+    background: #C448F3;
+    filter: blur(350px);
+}
+
+.order .order-table{
+    max-width: 100%;
+    height: 450px;
+    margin: 0 auto;
+    padding: 15px 40px;
+
+    background: linear-gradient(128.14deg, hsla(191, 100%, 66%, 0.59) 20.28%, rgba(137, 7, 239, 0.38) 85.67%);
+    border-radius: 50px;
+}
+
+.order .order-table h2{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44pt;
+    line-height: 97px;
+    margin-top: 50px;
+    
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    
+    background: linear-gradient(220deg, #E40ECF 42.5%, #21D4FD 49.71%), #FFFFFF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.ellipse5{
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    top: -90px;
+    left: -150px;
+    z-index: -3;
+    background: #E40ECF;
+    filter: blur(300px);
+}
+
+.order .order-group-elements{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding-top: 40px;
+}
+
+.order-icon-table{
+    position: relative;
+    margin-top: 40px;
+    width: 280px;
+    height: 120px;
+    z-index: 0;
+    
+    background: #1B063E;
+    border-radius: 15px;
+}
+
+.order-icon-table p{
+    padding: 0 10px;
+}
+
+.order-icon-table::after{
+    content: "";
+    width: 40%;
+    height: 80%;
+    position: absolute;
+    top: -33px;
+    left: 29.5%;
+    background: #1B063E;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.order .order-icon{
+    margin: 0 auto;
+    margin-top: -13px;
+    text-align: center;
+    z-index: 1;
+}
+
+.order .order-group-elements p{
+    margin-top: 12px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13pt;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    
+    color: #FFFFFF;
+}
+
+.order-where{
+    margin: 150px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.order-countries h2{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(24px + 16 * (190vw / 1000));
+    line-height: 92px;
+    
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    
+    background: linear-gradient(235.34deg, #E40ECF 45.5%, #21D4FD 59.71%), #FFFFFF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.order-countries h2.order-text1{
+    width: 450px;
+    line-height: 60px;
+    font-size: 60pt;
+}
+
+.order-countries h2.order-text1 i{
+    font-size: 40pt;
+}
+
+.order-countries h2.order-text2{
+    width: 450px;
+    font-size: 66pt;
+    margin-top: -5px;
+}
+
+.order-list{
+    width: 40%;
+    display: flex;
+    justify-content:space-around;
+    color: white;
+    gap: 5px;
+}
+
+.order-list .list{
+    position: relative;
+    width: 170px;
+    height: 200px;
+    background: radial-gradient(42.61% 55.51% at 60.46% 100%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(58.56% 126.24% at 31.37% 0%, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(74.14% 74.14% at 102.47% 39.73%, #B566E6 0%, rgba(181, 102, 230, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(88.4% 88.4% at 86.12% 6.46%, #ff1c8a94 0%, rgba(229, 102, 163, 0) 56.56%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(124.52% 124.52% at -3.99% 35.36%, rgba(72, 145, 255, 0.89) 0%, rgba(0, 78, 255, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #D0E0F3;
+    box-shadow: inset 0px 0px 18px rgba(255, 255, 255, 0.82);
+    border-radius: 50px;
+}
+
+.order-list .list1{
+    margin-right: 10px;
+}
+
+.order-list .list2{
+    margin-left: 10px;
+}
+
+.order-list ul{
+    list-style-type: none;
+    padding: 28px 0;
+}
+
+.order-list .list::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 7px;
+    left: 0;
+    
+    background: radial-gradient(42.61% 55.51% at 60.46% 100%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(58.56% 126.24% at 31.37% 0%, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(108.75% 108.75% at 117.11% 81.18%, #B566E6 0%, rgba(181, 102, 230, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(88.4% 88.4% at 86.12% 6.46%, #ed4697c9 0%, rgba(229, 102, 163, 0) 56.56%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(73.57% 73.57% at 0% 67.49%, #4485f4 0%, rgba(86, 102, 239, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(124.52% 124.52% at -3.99% 35.36%, rgba(0, 71, 255, 0.38) 0%, rgba(0, 78, 255, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #D0E0F3;
+    box-shadow: -5px 5px 80px rgba(210, 108, 203, 0.882);
+    border-radius: 50px;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.order-list .list::after{
+    content: "";
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    top: 7px;
+    left: 0;
+
+    background: radial-gradient(42.61% 55.51% at 60.46% 100%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(58.56% 126.24% at 31.37% 0%, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(108.75% 108.75% at 117.11% 81.18%, #B566E6 0%, rgba(181, 102, 230, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(88.4% 88.4% at 86.12% 6.46%, #FF1C89 0%, rgba(229, 102, 163, 0) 56.56%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(73.57% 73.57% at 0% 67.49%, #E478FF 0%, rgba(86, 102, 239, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(124.52% 124.52% at -3.99% 35.36%, rgba(0, 71, 255, 0.38) 0%, rgba(0, 78, 255, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #D0E0F3;
+    box-shadow: 0px 51px 95px -41px #003CCF, -80px -101px 147px -68px rgba(255, 28, 137, 0.62), 0px 109px 175px -30px rgba(183, 0, 206, 0.64);
+    border-radius: 50px;
+}
+
+.order-countries li{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12pt;
+    line-height: 180%;
+    text-align: center;
+    margin-top: 0;
+    letter-spacing: 0.07em;
+    color: #23002C;
+}
+
+.ellipse6{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    top: -100px;
+    right: 0;
+    z-index: -3;
+    
+    background: #00B4DD;
+    filter: blur(300px);
+}
+
+.subscribe{
+    position: relative;
+}
+
+.subscribe h2{
+    margin: 0 auto;
+    margin-top: 30px;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44pt;
+    line-height: 70px;
+    
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    
+    background: linear-gradient(265.34deg, #21D4FD 21.26%, #E40ECF 66.55%), #FFFFFF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subscribe .subscr-btn {
+    width: 100%;
+    height: 140px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 0 10px;
+    
+    background: linear-gradient(180deg, rgba(7, 196, 239, 0.61) 0%, rgba(7, 196, 239, 0.25) 100%);
+    border-radius: 8px;
+}
+
+.subscribe .subscr-btn form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 49px 0;
+}
+
+.subscribe .subscr-btn input::placeholder{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9pt;
+    line-height: 32px;
+
+    color: #FFFFFF;
+}
+
+.subscribe .subscr-btn input{
+    width: 72%;
+    height: 42px;
+    padding-left: 20px;
+    
+    border: 1px solid #21D4FD;
+    border-radius: 8px;
+    background: none;
+}
+
+
+.subscribe .subscr-btn button{
+    width: 18%;
+    height: 42px;
+    cursor: pointer;
+    
+    background: #21D4FD;
+    border-radius: 8px;
+    border: none;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9pt;
+    line-height: 32px;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+.play-company .companies{
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    margin: 130px 0 120px 0;
+}
+
+.play-company .company{
+    position: relative;
+    width: 260px;
+    height: 100px;
+    
+    background: radial-gradient(42.61% 55.51% at 60.46% 100%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(58.56% 126.24% at 31.37% 0%, rgba(255, 255, 255, 0.4002) 0%, rgba(255, 255, 255, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(74.14% 74.14% at 102.47% 39.73%, rgba(196, 102, 230, 0.83) 0%, rgba(219, 102, 229, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(88.4% 88.4% at 86.12% 6.46%, rgba(159, 114, 233, 0.89) 0%, rgba(114, 233, 138, 0) 56.56%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(73.57% 73.57% at 0% 67.49%, rgba(13, 126, 255, 0.52) 0%, rgba(86, 102, 239, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(124.52% 124.52% at -3.99% 35.36%, rgba(0, 87, 255, 0.69) 3.83%, rgba(0, 209, 255, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #D0E0F3;
+    box-shadow: inset 0px 0px 12.7473px rgba(255, 255, 255, 0.82);
+    border-radius: 51.6973px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14pt;
+    text-align: center;
+    padding: 40px 0;
+    letter-spacing: 0.06em;
+    
+    color: #000000;
+
+
+}
+
+.play-company .company:hover{
+    transform: translateY(-3%);
+}
+
+.play-company .company:nth-child(4){
+    padding: 30px 0;
+}
+
+.play-company .company::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 5px;
+    width: 100%;
+    height: 100px;
+    z-index: -1;
+    
+    background: radial-gradient(42.61% 55.51% at 60.46% 100%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(58.56% 126.24% at 31.37% 0%, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(108.75% 108.75% at 117.11% 81.18%, #DF72E9 0%, rgba(79, 181, 255, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(88.4% 88.4% at 86.12% 6.46%, #72E98A 0%, rgba(114, 233, 138, 0) 56.56%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(73.57% 73.57% at 0% 67.49%, #f156ecec 0%, rgba(0, 209, 255, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(124.52% 124.52% at -3.99% 35.36%, #FF00F5 0%, rgba(0, 209, 255, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #D0E0F3;
+    box-shadow: 0px 36.1173px 67.2773px -29.0354px rgba(65, 203, 0, 0.63), -56.6545px -71.5263px 104.103px -48.1564px rgba(114, 233, 138, 0.62), 0px 77.1918px 123.932px -21.2454px #0047FF;
+    border-radius: 56.6545px;
+}
+
+.play-company .company::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 5px;
+    width: 100%;
+    height: 100px;
+    z-index: -2;
+    
+    background: radial-gradient(42.61% 55.51% at 60.46% 100%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(58.56% 126.24% at 31.37% 0%, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(108.75% 108.75% at 117.11% 81.18%, #B566E6 0%, rgba(181, 102, 230, 0) 77.6%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(88.4% 88.4% at 86.12% 6.46%, #72E98A 0%, rgba(114, 233, 138, 0) 56.56%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(73.57% 73.57% at 0% 67.49%, #E478FF 0%, rgba(86, 102, 239, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(124.52% 124.52% at -3.99% 35.36%, #00D1FF 0%, rgba(0, 209, 255, 0) 69.33%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #D0E0F3;
+    box-shadow: inset 0px 0px 10.6227px rgba(210, 108, 204, 0.71);
+    border-radius: 72.2345px;
+}
+
+.info{
+    padding-top: 68px;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.info li:hover{
+    opacity: 0.8;
+}
+
+footer{
+    background: #161616;
+    min-height: 300px;
+    width: 100%;
+}
+
+footer a{
+    text-decoration-line: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10pt;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+footer ul{
+    list-style-type: none;
+}
+
+footer h3{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17pt;
+    text-transform: uppercase;
+    color: #F9F9F9;
+}
+
+.contacts ul{
+    line-height: 30px;
+    margin-left: 25px;
+}
+
+.contacts li:nth-child(1){
+    list-style-image: url("../img/icons/telegram-contact.svg");
+}
+
+.contacts li:nth-child(2){
+    list-style-image: url("../img/icons/whatsUp-contact.svg");
+}
+
+.contacts li:nth-child(3){
+    list-style-image: url("../img/icons/mail-contact.svg");
+}
+
+.contacts li:nth-child(4){
+    list-style-image: url("../img/icons/skype-contact.svg");
+}
+
+.contacts h3,.menu h3{
+    margin-bottom: 25px;
+}
+
+.social .networks{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social .network{
+    position: relative;
+    z-index: 1;
+}
+
+.social .network:hover{
+    opacity: 0.8;
+}
+
+.social .network::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    filter: blur(25px);
+    z-index: -1;
+}
+
+.social .network:nth-child(1)::before{
+    background: #86D28A;
+}
+
+.social .network:nth-child(2)::before{
+    background: #039BE5;
+}
+
+.social .network:nth-child(3)::before{
+    background: #0047FF;
+}
+
+.social .network:nth-child(4)::before{
+    background: #FF007A;
+}
+
+.social .network:nth-child(5)::before{
+    background: #FF0000;
+}
+
+.social .networks img{
+    width: 40px;
+    height: 40px;
+}
+
+.social .other{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11pt;
+    line-height: 20px;
+    color: #FFFFFF;
+
+    margin-top: 14%;
+}
+
+@media screen and (max-width: 1023px) {
+    .shop-name h1{
+        font-size: 54pt;
+        font-size: calc(40px + 25 * (100vw / 1000));
+        line-height: 90px;
+    }
+
+    .order-where{
+        margin: 100px 0;
+    }
+
+    .list-choice{
+        gap: 60px;
+    }
+
+    .main-text{
+        width: 90%;
+        font-size: calc(12px + 12 * (100vw / 1000));
+    }
+
+    .order .order-table h2{
+        font-size: calc(24px + 16 * (190vw / 1000));
+    }
+
+    .order-icon-table::after{
+        width: 40%;
+        height: 60%;
+        top: -30px;
+    }
+
+    .steam-bg{
+        top: 550px;
+    }
+
+    .subscribe h2{
+        font-size: calc(24px + 16 * (140vw / 1000));
+        line-height: 60px;
+    }
+
+    .order-countries h2.order-text1{
+        width: 390px;
+        font-size: 52pt;
+    }
+    
+    .order-countries h2.order-text1 i{
+        font-size: 35pt;
+    }
+    
+    .order-countries h2.order-text2{
+        width: 390px;
+        font-size: 59pt;
+    }
+
+    .order .order-group-elements p{
+        font-size: 13pt;
+        font-size: calc(5px + 12 * (100vw / 1000));
+    }
+
+    .order-countries li{
+        font-size: 10pt;
+    }
+
+    .order-list ul{
+        padding: 40px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .shop-name h1{
+        font-size: calc(30px + 34 * (80vw / 1000));
+        line-height: 70px;
+    }
+
+    .bg-consoles{
+        position: absolute;
+        width: 60%;
+        height: 400px;
+        right: 4%;
+        top: 280px;
+    }
+
+    .order-where{
+        margin: 100px 0;
+        flex-wrap: wrap;
+    }
+
+    .logo-name{
+        font-size: 10pt;
+        padding: 26px 0;
+    }
+
+    .main-text{
+        margin-top: 30%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 30px;
+    }
+
+    .ellipse2{
+        opacity: 0.8;
+    }
+
+    .subscribe h2{
+        line-height: 50px;
+    }
+
+    /* .welcome-icons{
+        margin-top: 40px;
+    } */
+
+    .head-icons{
+        padding: 23px 0;
+    }
+
+    .head-icon1{
+        width: 22px;
+        height: 22px;
+        margin-right: 2px;
+    }
+    
+    .head-icon2{
+        width: 26px;
+        height: 26px;
+        margin-left: 2px;
+    }
+
+    .list-choice{
+        gap: 20px;
+    }
+
+    .btn-product{
+        font-size: 10pt;
+        height: 50px;
+        font-size: calc(5px + 10 * (100vw / 1000));
+        padding-top: 14px;
+    }
+
+    .welcome-info{
+        margin-top: 0;
+        padding-top: 100px;
+    }
+
+    .welcome-info .rectangle{
+        font-size: 14pt;
+    }
+
+    .welcome-info .rectangles{
+        gap: 120px;
+    }
+
+    .welcome-info .rectangle{
+        padding: 30px 35px; 
+    }
+
+    .welcome-info .rectangle{
+        height: 30%;
+    }
+
+    .steam-bg{
+        top: 75%;
+    }
+
+    .xbox-bg{
+        max-width: 350px;
+        max-height: 350px;
+        top: 20px;
+        left: 50%;
+        overflow: hidden;
+    }
+
+    .steam-bg{
+        width: 380px;
+        height: 255px;
+        top: 55%;
+        overflow: hidden;
+    }
+
+    .order .order-group-elements p{
+        font-size: 13pt;
+    }
+
+    .order .order-table{
+        height: 45%;
+        padding-bottom: 50px;
+    }
+
+    .order .order-group-elements{
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+    
+    .message-icon{
+        bottom: 3%;
+    }
+
+    .message-icon img{
+        width: 20px;
+        height: 20px;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    
+    .question-message{
+        width: 50px;
+        height: 50px;
+    }
+
+    .head-site{
+        gap: 5px;
+    }
+
+    .logo-name{
+        letter-spacing: 5px;
+    }
+    
+    .list-choice a{
+        font-size: calc(7px + 8 * (100vw / 1000));
+    }
+
+    .order-list .list{
+        width: 170px;
+        height: 200px;
+    }
+
+    .order-list{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .play-company .companies{
+        margin: 80px 0 50px 0;
+        gap: 13px;
+    }
+
+    .play-company .company{
+        font-size: 10pt;
+    }
+
+    .info{
+        padding: 70px 0 20px 0;
+        display: flex;
+        justify-content:center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    
+    footer a{
+        font-size: 9pt;
+    }
+    
+    footer h3{
+        font-size: 13pt;
+    }
+
+    .social .networks{
+        gap: 5px;
+        margin-top: 21%;
+    }
+
+    .social .networks img{
+        width: 28px;
+        height: 28px;
+    }
+
+    .social .other{
+        font-size: 7pt;
+        margin-top: 18%;
+    }
+
+    .ellipse4{
+        width: 300px;
+        height: 300px;
+    }
+    
+    .subscribe .subscr-btn{
+        height: 10%;
+    }
+
+    .subscribe .subscr-btn form{
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 30px 0;
+    }
+
+    .subscribe .subscr-btn button{
+        font-size: 8pt;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+
+    .hamburger-menu{
+        display: block;
+    }
+
+    .ellipse1{
+        height: 150px;
+        filter: blur(90px);
+    }
+
+    .ellipse2{
+        opacity: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 555px;
+        filter: blur(250px);
+    }
+
+    .ellipse5{
+        width: 100%;
+    }
+
+    .container{
+        max-width: 320px;
+        padding: 0 20px;
+    }
+
+    .shop-name h1{
+        font-size: 24pt;
+        line-height: 39px;
+        text-align: center;
+        margin: 50px auto auto 0;
+    }
+    
+    header{
+        position: fixed;
+        width: 100%;
+        height: 55px;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.257);
+    }
+
+    .logo-name{
+        font-size: 9pt;
+        height: 100%;
+        padding: 15.5px 0;
+    }
+
+    .list-choice{
+        display: none;
+    }
+    
+    .head-icons{
+        display: none;
+    }
+
+    .main-view{
+        width: 100%;
+        height: 555px;
+        margin-bottom: 396px;
+    }
+
+    .bg-consoles{
+        position: relative;
+        width: 300px;
+        height: 200px;
+        top: 0;
+        margin-top: 25px;
+    }
+    
+    /* .welcome-icons{
+        display: inline-block;
+        margin: 0;
+    } */
+    
+    .btn-product{
+        width: 272px;
+        height: 64px;
+        padding-top: 20px;
+        margin-top: 30px;
+    }
+
+    .btn-product a{
+        font-size: 11pt;
+    }
+
+    .message-icon{
+        bottom: 3%;
+    }
+
+    .message-icon img{
+        width: 20px;
+        height: 20px;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    
+    .question-message{
+        width: 50px;
+        height: 50px;
+    }
+
+    .link-form{
+        width: 270px;
+        height: 450px; 
+        border-radius: 35px;
+    }
+
+    .close-form{
+        top: 15px;
+        right: 20px;
+    }
+    
+    .fa-xmark{
+        font-size: 14px;
+    }
+    
+    .link-form h3{
+        margin-top: 45px;
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .link-form p{
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-weight: 300;
+        font-size: 8px;
+        line-height: 15px;
+    }
+    
+    .link-form form input{
+        height: 30px;
+        margin-bottom: 8px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    
+    .link-form form textarea{
+        border-radius: 5px;;
+        font-size: 12px;
+    }
+    
+    .link-form form textarea::placeholder, .link-form form input::placeholder{
+        font-size: 12px;
+    }
+    
+    .link-form form .check_in p{
+        width: 80%;
+        font-size: 8px;
+        line-height: 12px;
+    }
+    
+    .link-form form button{
+        width: 180px;
+        height: 30px;
+        margin-top: 8px;
+        border-radius: 40px;
+        font-weight: 600;
+        font-size: 10px;
+        letter-spacing: 0.4em;
+    }
+
+    .cbx {
+        top: -20px;
+        width: 15px;
+        height: 15px;
+        border-radius: 2px;
+    }
+    
+    .cbx:after {
+        bottom: 3.5px;
+        left: 3px;
+        width: 4px;
+        height: 8px;
+    }
+
+    .main-text{
+        width: 280px;
+        height: 295px;
+
+        font-size: 12pt;
+        line-height: 20px;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .welcome-info .rectangles{
+        gap: 50px;
+    }
+
+    .welcome-info .rectangle{
+        width: 278px;
+        height: 211px;
+        border-radius: 20px;
+    
+        text-align: justify;
+        padding: 30px 15px;
+
+        font-size: 12pt;
+        line-height: 20px;
+        letter-spacing: 0.05em;   
+    }
+
+    .welcome-info .rectangle::after{
+        border-radius: 22px;
+        margin-top: 10px;
+    }
+
+    .welcome-info .rectangle::before{
+        border-radius: 28px;
+        margin-top: 10px;
+    }
+
+    .xbox-bg{
+        width: 257px;
+        height: 257px;
+        left: -25%;
+        top: 30px;
+        transform: scale(-1, 1);
+        overflow: hidden;
+    }
+
+    .steam-bg{
+        width: 280px;
+        height: 155px;
+        left: 10%;
+        top: 525px;
+        overflow: hidden;
+    }
+    
+    .order .order-table{
+        width: 294px;
+        height: 600px;
+        margin: 0 auto;
+        padding: 0 16px;
+        border-radius: 12px;
+    }
+
+    .order .container{
+        padding: 0 0;
+    }
+    
+    .order .order-table h2{  
+        font-size: 15pt;
+        line-height: 23px;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    .order-icon-table{
+        position: relative;
+        margin-top: 40px;
+        width: 228px;
+        height: 97px;
+        border-radius: 11px;
+    }
+
+    .order-icon-table::after{
+        top: -33px;
+        left: 71px;
+        width: 86px;
+        height: 86px;
+    }
+
+    .order .order-icon{
+        margin-top: -16px;
+    }
+    
+    .order-icon-table p{
+        padding: 0 12px;
+    }
+
+    .order .order-group-elements p{
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        letter-spacing: 0.06em;
+    }
+
+    .order-text{
+        text-align: center;
+    }
+    
+    .order-countries h2.order-text1{
+        width: auto;
+        height: auto;
+        font-size: 40px;
+        line-height: 31px;    
+        letter-spacing: 0.02em;
+        background: linear-gradient(265.34deg, #E40ECF 25.5%, #21D4FD 59.71%), #FFFFFF;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .order-where{
+        margin: 80px 0;
+    }
+
+    .order-countries h2.order-text1 i{
+        width: auto;
+        height: auto;
+        font-size: 27px;
+        line-height: 31px;
+        background: linear-gradient(265.34deg, #E40ECF 25.5%, #21D4FD 59.71%), #FFFFFF;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .order-countries h2.order-text2{
+        width: auto;
+        height: auto;
+        font-size: 45px;
+        line-height: 45px;
+        letter-spacing: 0.02em;
+        
+        background: linear-gradient(265.34deg, #E40ECF 25.5%, #21D4FD 59.71%), #FFFFFF;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .order-list .list{
+        width: 117px;
+        height: 132px;
+        border-radius: 32px;
+    }
+
+    .order-list .list ul{
+        padding: 21px 0;
+    
+    }
+
+    .order-list .list ul li{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10.2903px;
+        line-height: 177.4%;
+        text-align: center;
+        letter-spacing: 0.07em;
+        color: #23002C;
+    }
+
+    .order-list .list::after{
+        border-radius: 34px;
+        top: 5px;
+    }
+
+    .order-list .list::before{
+        border-radius: 36px;
+        top: 5px;
+    }
+
+    .subscribe h2{ 
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 0.02em;
+    }
+
+    .subscribe .subscr-btn {
+        width: 277px;
+        height: 95px;
+        border-radius: 2.5px;
+    }
+    
+    .subscribe .subscr-btn form{
+        gap: 13px;
+        padding: 20px 0;
+    }
+
+    .subscribe .subscr-btn input{
+        width: 252px;
+        height: 25px;
+        border-radius: 2.5px;
+        padding-left: 10px;
+    }
+    
+    .subscribe .subscr-btn button{
+        width: 137px;
+        height: 22px;
+        border-radius: 2.5px;
+        line-height: 0;
+    }
+
+    .play-company .companies{
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    .play-company .company{
+        width: 130px;
+        height: 55px;
+        border-radius: 23px;
+        padding: 20px 0;
+
+        font-size: 13px;
+        letter-spacing: 0.06em;
+    }
+
+    .play-company .company:nth-child(4){
+        padding: 13px 0;
+    }
+    
+    .play-company .company::after{
+        top: 3px;
+        height: 100%;
+
+        border-radius: 25px;
+    }
+    
+    .play-company .company::before{
+        top: 3px;
+        height: 100%;
+
+        border-radius: 25px;
+    }
+    
+    .info{
+        justify-content: space-between;
+        gap: 17px;
+        padding: 20px 0;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    footer{
+        min-height: auto;
+    }
+
+    footer a{
+        font-size: 7px;
+        line-height: 10px;
+    }
+
+    footer h3{
+        font-size: 10px;
+        line-height: 9px;
+    }
+
+    .social .other{
+        font-size: 7px;
+        line-height: 7px;
+    }
+
+    .social .networks img{
+        width: 18px;
+        height: 18px;
+    }
+
+    .social .networks{
+        gap: 6px;
+        margin-top: 21%;
+    }
+
+    .contacts ul{
+        line-height: 4.5px;
+        margin-left: 16px;
+    }
+
+    .contacts li:nth-child(1){
+        list-style-image: url("../img/icons/fly.svg");
+    }
+    
+    .contacts li:nth-child(2){
+        list-style-image: url("../img/icons/call.svg");
+    }
+    
+    .contacts li:nth-child(3){
+        list-style-image: url("../img/icons/mail.svg");
+    }
+    
+    .contacts li:nth-child(4){
+        list-style-image: url("../img/icons/sth.svg");
+    }
+
+    .social .other{
+        font-size: 7px;
+        line-height: 7px;
+        margin-top: 11%;
+    }
+}
+
+@media screen and (width: 280px){
+
+    .shop-name h1{
+        font-size: 20pt;
+    }
+
+    .steam-bg{
+        width: 240px;
+    }
+
+    .bg-consoles{
+        width: 265px;
+        height: 180px;
+        top: 0;
+        margin-top: 25px;
+    }
+
+    .ellipse4{
+        width: 260px;
+        height: 260px;
+    }
+
+    .btn-product{
+        width: 240px;
+        height: 50px;
+        padding-top: 15px;
+        margin-top: 30px;
+    }
+
+    .btn-product a{
+        font-size: 10pt;
+    }
+
+    .link-form{
+        bottom: 5px;
+        right: 5px;
+    }
+
+    .message-icon img{
+        width: 18px;
+        height: 18px;
+        margin-top: 12px;
+        margin-left: 12px;
+    }
+    
+    .question-message{
+        width: 42px;
+        height: 42px;
+    }
+
+    .main-text{
+        width: 250px;
+        height: auto;
+        margin-top: 90px;
+    }
+
+    .welcome-info .rectangles{
+        justify-content:center; 
+    }
+
+    .welcome-info .rectangle{
+        width: 240px;
+        height: 211px;
+        border-radius: 20px;
+        padding: 15px 15px;
+    }
+
+    .subscribe .subscr-btn {
+        width: 100%;
+    }
+
+    .play-company .companies{
+        gap: 12px;
+    }
+    
+    .play-company .company{
+        width: 110px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-height: 540px) {
+    .link-form{
+        width: 270px;
+        height: 450px; 
+        border-radius: 35px;
+    }
+
+    .close-form{
+        top: 15px;
+        right: 20px;
+    }
+    
+    .fa-xmark{
+        font-size: 14px;
+    }
+    
+    .link-form h3{
+        margin-top: 45px;
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .link-form p{
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-weight: 300;
+        font-size: 8px;
+        line-height: 15px;
+    }
+    
+    .link-form form input{
+        height: 30px;
+        margin-bottom: 8px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    
+    .link-form form textarea{
+        border-radius: 5px;;
+        font-size: 12px;
+    }
+    
+    .link-form form textarea::placeholder, .link-form form input::placeholder{
+        font-size: 12px;
+    }
+    
+    .link-form form .check_in p{
+        width: 80%;
+        font-size: 8px;
+        line-height: 12px;
+    }
+    
+    .link-form form button{
+        width: 180px;
+        height: 30px;
+        margin-top: 8px;
+        border-radius: 40px;
+        font-weight: 600;
+        font-size: 10px;
+        letter-spacing: 0.4em;
+    }
+
+    .cbx {
+        top: -20px;
+        width: 15px;
+        height: 15px;
+        border-radius: 2px;
+    }
+    
+    .cbx:after {
+        bottom: 3.5px;
+        left: 3px;
+        width: 4px;
+        height: 8px;
+    }
+}
+
+@media screen and (max-height: 450px) and (orientation: landscape){
+    .message-icon{
+        display: none;
+    }
+}
