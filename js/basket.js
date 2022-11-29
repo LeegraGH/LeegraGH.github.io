@@ -7,9 +7,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const basket=document.querySelector(".basket");
     const buyItems=document.querySelector(".buy-items");
     const buyItem=buyItems.querySelectorAll(".buy-item");
-    const cntItem=buyItems.querySelectorAll(".cnt-item");
     const money=document.querySelector(".allSum");
-    const costItem=document.querySelectorAll('.item-sum');
     const fon=document.querySelector('.popular-item-slider');
 
     btn1.addEventListener('click',()=>{
@@ -33,8 +31,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
         let btnDel=buyItem[i].querySelector(".fa-xmark");
         let clearSum=buyItem[i].querySelector(".item-sum");
         btnDel.addEventListener('click', ()=>{
+            let cnt = buyItem[i].querySelector('.cnt-item').querySelector('p');
+            money.textContent=+money.textContent-(+clearSum.textContent)*(+cnt.textContent);
             buyItem[i].remove();
-            money.textContent=+money.textContent-(+clearSum.textContent);
             k--;
             if (k==0){
                 basket.style=`

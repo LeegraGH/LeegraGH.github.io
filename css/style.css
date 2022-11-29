@@ -1205,6 +1205,10 @@ footer h3{
     height: 40px;
 }
 
+.menu li{
+    line-height: 30px;
+}
+
 .social .other{
     font-family: 'Montserrat';
     font-style: normal;
