@@ -59,7 +59,7 @@ header{
 .popular-item-slider .popular-item img{
     width: 100%;
     height: auto;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .gif-1 img{
@@ -309,7 +309,7 @@ a.gallery-btn{
     position: relative;
     display: inline-block;
     z-index: 1;
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 5px;
     padding: 5px;
     width: 80%;
@@ -393,7 +393,7 @@ a.gallery-btn{
 }
 
 .buy-items .buy-item .what-item p{
-    text-align:center;
+    text-align:right;
 }
 
 .buy-items img:nth-child(n){
@@ -437,6 +437,14 @@ a.gallery-btn{
     opacity: 1;
 }
 
+.all-cost-item{
+    display: flex;
+    flex-direction: row;
+    width: 35%;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .buy-items .buy-item .cnt-item p{
     margin: 0 5px;
     vertical-align: middle;
@@ -469,7 +477,7 @@ a.gallery-btn{
     }
 
     .create-order, .fast-order{
-        font-size: calc(6px + 4  * (100vw / 1000));
+        font-size: calc(5px + 4  * (100vw / 1000));
     }
 
     .basket-area-1 .empty{
@@ -494,6 +502,11 @@ a.gallery-btn{
         font-size: calc(8px + 9 * (100vw / 1000));
         line-height: 20px;
     }
+
+    .buy-items .buy-item .cnt-item{
+        padding: 4px;
+        border-radius: 7px;
+    }
 }
 
 @media screen and (max-width: 767px){
@@ -502,6 +515,10 @@ a.gallery-btn{
         border: 1px solid white;
         border-radius: 3px;
         padding: 3px;
+    }
+
+    .popular-item-slider .popular-item img{
+        border-radius: 5px;
     }
 
     a.gallery-btn{
@@ -565,8 +582,8 @@ a.gallery-btn{
     }
 
     .buy-items .buy-item .cnt-item{
-        padding: 5px;
-        border-radius: 8px;
+        padding: 3px;
+        border-radius: 6px;
     }
 
     .buy-items p:nth-child(n){
@@ -585,6 +602,10 @@ a.gallery-btn{
     .clear-items button{
         margin-left: 2px;
         font-size: 11px;
+    }
+
+    .buy-items img:nth-child(n){
+        border-radius: 10px;
     }
 }
 
@@ -680,7 +701,7 @@ a.gallery-btn{
 
     .buy-items img:nth-child(n){
         width: 40%;
-        border-radius: 10px;
+        border-radius: 5px;
     }
 
     .buy-items .buy-item .cnt-item{
@@ -723,10 +744,6 @@ a.gallery-btn{
 
     .popular-item-slider{
         gap: 5px;
-    }
-
-    .popular-item-slider .popular-item img{
-        border-radius: 8px;
     }
 
     .popular-items h2{

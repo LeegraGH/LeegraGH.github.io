@@ -67,11 +67,12 @@
     line-height: 25px;
     text-align: center;
     padding: 10px 0px;
-    
     color: #FFFFFF; 
 }
 
 .entry-form .btn-form button:first-child{
+    transform: scale(1);
+    transition: transform 0.3s linear;
     background: linear-gradient(262.17deg, #21D4FD -9.98%, #E40ECF 62.2%); 
 }
 
@@ -80,11 +81,21 @@
     border: 1px solid #FFFFFF;
 }
 
+.entry-form .btn-form button:nth-child(2):hover{
+    opacity: 1;
+}
+
 .entry-form .btn-form button:last-child{
+    transform: scale(1);
+    transition: transform 0.3s linear;
     width: 100%;
     line-height: 20px;
     margin-top: 5px;
     background: linear-gradient(262.17deg, #21D4FD -9.98%, #E40ECF 62.2%);
+}
+
+.entry-form .btn-form button:last-child:hover,.entry-form .btn-form button:first-child:hover{
+    transform: scale(1.01);
 }
 
 .entry-icons h4{
@@ -243,7 +254,7 @@
     background-size: 300% 300%;
     background-position: 0 50%;
     border-radius: calc(2 * var(--border-width));
-    animation: moveGradient 4s alternate infinite;
+    animation: moveGradient 5s alternate infinite;
 }
 
 @keyframes moveGradient {

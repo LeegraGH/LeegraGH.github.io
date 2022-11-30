@@ -335,10 +335,12 @@ header{
 .swiper-button-next, .swiper-rtl .swiper-button-prev{
     right: 5% !important; 
     left: auto;
+    z-index: 1;
 }
 .swiper-button-prev, .swiper-rtl .swiper-button-next{
     left: 5% !important; 
     right: auto;
+    z-index: 1;
 }
 
 .color-items .color-types{
@@ -465,6 +467,10 @@ header{
     .slider{
         margin: 60px 0;
     }
+    
+    .info-item{
+        border-radius: 35px;
+    }
 }
 
 @media screen and (max-width: 479px){
@@ -574,5 +580,9 @@ header{
         font-size: 35px;
         line-height: 60px;
         margin: 30px 0;
+    }
+
+    .info-item{
+        border-radius: 25px;
     }
 }

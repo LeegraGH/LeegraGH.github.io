@@ -121,13 +121,13 @@
                         <button type="button" class="changePer"><i class="fa-solid fa-pen"></i></button>
                         <div class="per-photo"><a href=""><img src="img/icons/circle-user.svg" alt="user_photo"></a></div>
                         <div class="per-info">
-                            <p><b>Круглова Анна</b></p>
-                            <p>Номер телефона: <i>89012831757</i></p>
-                            <p>Почта: <i>use.anya@gmail.com</i></p>
-                            <p>Дата регистрации: <i>01.12.2022</i></p>
-                            <p>Покупок совершено: <i>0</i></p>
-                            <p>Персональная скидка: <i>0%</i></p>
-                            <p>Адрес доставки: <i>Россия, г. Москва, проспект Вернадского, дом 86с1</i></p>
+                            <p><b>Иванов Иван</b></p>
+                            <p>Номер телефона: <i>89002831727</i></p>
+                            <p>Почта: <i>ivan.send@gmail.com</i></p>
+                            <p>Дата регистрации: <i>11.07.2021</i></p>
+                            <p>Покупок совершено: <i>7</i></p>
+                            <p>Персональная скидка: <i>5%</i></p>
+                            <p>Адрес доставки: <i>Россия, г. Москва, проспект Вернадского, дом 78</i></p>
                             <p>Ближайшие доставки: <i>—</i></p>
                         </div>
                     </div>
@@ -191,6 +191,27 @@
                     </div>
                 </div>
             </section>
+            <div class="message-icon">
+                <div class="question-message"><img src="img/icons/message.svg" alt="message"></div>
+                <div class="link-form">
+                    <div class="close-form"><i class="fa-solid fa-xmark"></i></div>
+                    <h3>Задать вопрос</h3>
+                    <p>Задайте вопрос и оставьте контактные данные.<br>Мы обязательно свяжемся с вами в рабочее время!</p>
+                    <form name="form-back-call" action="#" enctype="multipart/form-data" method="post">
+                        <input type="login" name="name" placeholder="Имя">
+                        <input type="tel" name="phone" placeholder="Телефон">
+                        <textarea name="question" placeholder="Ваш вопрос"></textarea>
+                        <div class="check_in">
+                            <div class="cntr">
+                                <input checked="" type="checkbox" id="cbx" class="hidden-xs-up">
+                                <label for="cbx" class="cbx"></label>
+                            </div>
+                            <p>Нажимая на кнопку "Отправить" Вы выражаете согласие на обработку персональных данных в соответствии с требованиями Федерального закона «О персональных данных»</p>
+                        </div>
+                        <button type="submit" name="send">Отправить</button>
+                    </form>
+                </div>
+            </div>
         </div>
         <footer>
             <div class="container">
@@ -233,5 +254,6 @@
     </div>
     <script src="js/changePerData.js"></script>
     <script src="js/entry.js"></script>
+    <script src="js/showForm.js"></script>
 </body>
 </html>

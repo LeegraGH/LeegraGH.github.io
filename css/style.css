@@ -15,15 +15,11 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
+} 
 
 .top {
     flex-grow: 1;
 }
-
-/* body::-webkit-scrollbar {
-    display: none;            
-} */
 
 .container{
     position: relative;
@@ -57,7 +53,7 @@ header{
     width: 26px;
     height: 26px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 30;
 }
 
 .menu__btn > span,
@@ -94,7 +90,7 @@ header{
     text-align: center;
     background: rgba(0, 0, 0, 0.97);
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-    z-index: 9;
+    z-index: 29;
 }
 
 .menu__item {
@@ -286,7 +282,7 @@ header{
 
 .message-icon{
     position: fixed;
-    z-index: 8;
+    z-index: 2;
     bottom: 5%;
     right: 5%;
 }
@@ -328,7 +324,7 @@ header{
     bottom: 15px;
     right: 15px;
     cursor: auto;
-    z-index: 10;
+    z-index: 1000;
 
     width: 450px;
     height: 540px;
